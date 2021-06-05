@@ -752,8 +752,8 @@ dockToStationOrStructureUsingSurroundingsButtonMenu { prioritizeStructures, desc
 warpToMiningSite : BotDecisionContext -> DecisionPathNode
 warpToMiningSite =
     useContextMenuCascadeOnListSurroundingsButton
-        (useMenuEntryWithTextContaining "asteroid belts"
-            (useRandomMenuEntry
+        (useMenuEntryWithTextContaining "locations"
+            (useMenuEntryWithTextContaining "miner"
                 (useMenuEntryWithTextContaining "Warp to Within"
                     (useMenuEntryWithTextContaining "Within 0 m" menuCascadeCompleted)
                 )
