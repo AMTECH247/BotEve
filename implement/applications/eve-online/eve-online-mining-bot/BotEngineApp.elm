@@ -91,7 +91,7 @@ import Regex
 -}
 defaultBotSettings : BotSettings
 defaultBotSettings =
-    { runAwayShieldHitpointsThresholdPercent = 45
+    { runAwayShieldHitpointsThresholdPercent = 50
     , unloadStationName = Nothing
     , unloadStructureName = Nothing
     , modulesToActivateAlways = []
@@ -753,7 +753,7 @@ warpToMiningSite : BotDecisionContext -> DecisionPathNode
 warpToMiningSite =
     useContextMenuCascadeOnListSurroundingsButton
         (useMenuEntryWithTextContaining "locations"
-            (useMenuEntryWithTextContaining "Miner"
+            (useMenuEntryWithTextContaining "miner"
                 (useMenuEntryWithTextContaining "Warp to Within"
                     (useMenuEntryWithTextContaining "Within 0 m" menuCascadeCompleted)
                 )
