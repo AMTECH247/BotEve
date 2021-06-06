@@ -91,13 +91,13 @@ import Regex
 -}
 defaultBotSettings : BotSettings
 defaultBotSettings =
-    { runAwayShieldHitpointsThresholdPercent = 70
+    { runAwayShieldHitpointsThresholdPercent = 45
     , unloadStationName = Nothing
     , unloadStructureName = Nothing
     , modulesToActivateAlways = []
     , hideWhenNeutralInLocal = Nothing
     , targetingRange = 8000
-    , miningModuleRange = 5000
+    , miningModuleRange = 10000
     , botStepDelayMilliseconds = 1300
     , oreHoldMaxPercent = 99
     , selectInstancePilotName = Nothing
@@ -752,8 +752,8 @@ dockToStationOrStructureUsingSurroundingsButtonMenu { prioritizeStructures, desc
 warpToMiningSite : BotDecisionContext -> DecisionPathNode
 warpToMiningSite =
     useContextMenuCascadeOnListSurroundingsButton
-        (useMenuEntryWithTextContaining "asteroid belts"
-            (useRandomMenuEntry
+        (useMenuEntryWithTextContaining "locations"
+            (useMenuEntryWithTextContaining "Miner"
                 (useMenuEntryWithTextContaining "Warp to Within"
                     (useMenuEntryWithTextContaining "Within 0 m" menuCascadeCompleted)
                 )
