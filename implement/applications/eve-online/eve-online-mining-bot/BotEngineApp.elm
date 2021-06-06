@@ -754,7 +754,7 @@ warpToMiningSite =
     useContextMenuCascadeOnListSurroundingsButton
         (useMenuEntryWithTextContaining "locations"
             (useMenuEntryWithTextContaining "miner"
-                (useMenuEntryWithTextContaining "Warp to Within"
+                (useMenuEntryWithTextContaining "Warp to Location"
                     (useMenuEntryWithTextContaining "Within 0 m" menuCascadeCompleted)
                 )
             )
